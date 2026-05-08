@@ -91,8 +91,8 @@ const rawQuestions = [
     question: "Qual é a definição de anemia macrocítica?",
     options: [
       "Volume Corpuscular Médio (VCM) acima de 100 fL",
-      "VCM acima de 80 fL com HCM reduzida",
-      "Hemoglobina <12 g/dL com RDW elevado",
+      "VCM acima de 80 fL com HCM e CHCM reduzidas",
+      "Hemoglobina <12 g/dL com RDW e VCM elevados",
       "VCM entre 90–100 fL com reticulócitos aumentados",
       "Hematócrito <35% com macroovalócitos ao esfregaço"
     ],
@@ -102,11 +102,11 @@ const rawQuestions = [
   {
     question: "Qual é a causa mais frequente de macrocitose em adultos?",
     options: [
-      "Alcoolismo",
-      "Deficiência de vitamina B12",
-      "Deficiência de ácido fólico",
-      "Hipotireoidismo",
-      "Síndrome mielodisplásica"
+      "Alcoolismo (efeito tóxico direto sobre eritropoiese)",
+      "Deficiência de vitamina B12 (anemia perniciosa)",
+      "Deficiência de ácido fólico (má nutrição)",
+      "Hipotireoidismo (reduz metabolismo eritroide)",
+      "Síndrome mielodisplásica (clone celular anormal)"
     ],
     correctIndex: 0,
     explanation: "O alcoolismo é a causa mais comum de macrocitose em adultos nos países ocidentais. O álcool tem efeito tóxico direto sobre as células eritroides da medula, causa hepatopatia e pode estar associado a déficit de folato. Caracteristicamente NÃO causa hipersegmentação de neutrófilos nem megaloblastose na biópsia de medula."
@@ -114,7 +114,7 @@ const rawQuestions = [
   {
     question: "Na anemia megaloblástica, o déficit na síntese de DNA se deve à deficiência de qual nucleotídeo?",
     options: [
-      "Timina — sintetizada a partir de metilenoTHF por ação da timidilato sintase",
+      "Timina — depende de metilenoTHF pela timidilato sintase",
       "Adenina — não sintetizada adequadamente sem vitamina B12",
       "Guanina — dependente do folato para sua síntese de novo",
       "Citosina — precisa de cobalamina como cofator",
@@ -126,9 +126,9 @@ const rawQuestions = [
   {
     question: "O fenômeno chamado 'methyl folate trap' ocorre quando:",
     options: [
-      "A deficiência de B12 impede a conversão de metilTHF → THF, aprisionando o folato em forma inutilizável para a síntese de timina",
+      "Sem B12, o folato fica preso como metilTHF (inativo para síntese de timina)",
       "O folato é destruído pela acidez gástrica antes de ser absorvido",
-      "O folato não pode ser absorvido no jejuno por deficiência de transportadores específicos",
+      "O folato não é absorvido no jejuno por falta de transportadores",
       "A B12 compete com o folato pelo mesmo receptor nas células hematopoéticas",
       "O fígado não consegue estocar folato adequadamente por hepatopatia crônica"
     ],
@@ -138,11 +138,11 @@ const rawQuestions = [
   {
     question: "Qual achado do hemograma é mais característico da anemia megaloblástica?",
     options: [
-      "Hipersegmentação de neutrófilos (≥6 segmentos) + macroovalócitos no esfregaço",
-      "Esferócitos + policromasia intensa",
+      "Hipersegmentação neutrofílica + macroovalócitos no esfregaço",
+      "Esferócitos + policromasia intensa ao esfregaço",
       "Drepanócitos + células em alvo (target cells)",
       "Linfocitose atípica + células de Reed-Sternberg",
-      "Bastões imaturos (bastonetes) + mielócitos no sangue periférico"
+      "Bastões imaturos + mielócitos no sangue periférico"
     ],
     correctIndex: 0,
     explanation: "A combinação de hipersegmentação neutrofílica (≥5% com ≥5 segmentos ou qualquer neutrófilo com ≥6 segmentos) + macroovalócitos + pancitopenia + reticulocitopenia é altamente sugestiva de anemia megaloblástica. O DHL extremamente elevado (hemólise intramedular) também é característico."
@@ -150,11 +150,11 @@ const rawQuestions = [
   {
     question: "Qual marcador bioquímico está EXCLUSIVAMENTE elevado na deficiência de vitamina B12 (e não na deficiência de folato)?",
     options: [
-      "Ácido metilmalônico sérico (MMA)",
-      "Homocisteína plasmática",
-      "DHL total",
-      "Bilirrubina indireta",
-      "Ferritina sérica"
+      "Ácido metilmalônico sérico (MMA elevado só na B12)",
+      "Homocisteína plasmática (eleva em B12 e folato)",
+      "DHL total (marcador inespecífico de lesão celular)",
+      "Bilirrubina indireta sérica (inespecífica, hemólise)",
+      "Ferritina sérica (marcador do estoque de ferro)"
     ],
     correctIndex: 0,
     explanation: "O ácido metilmalônico acumula somente na deficiência de B12, pois a adenosilcobalamina é cofator obrigatório da metilmalonil-CoA mutase (converte MMA → succinil-CoA). A homocisteína se eleva tanto na deficiência de B12 quanto na de folato. MMA elevado + Hcy elevada = B12. Hcy elevada com MMA normal = folato."
@@ -162,8 +162,8 @@ const rawQuestions = [
   {
     question: "As manifestações neurológicas na anemia megaloblástica ocorrem:",
     options: [
-      "Somente na deficiência de vitamina B12 — podem preceder a anemia e ser irreversíveis",
-      "Somente na deficiência de folato por degeneração medular espinhal",
+      "Somente na deficiência de B12 e podem preceder a anemia",
+      "Somente na deficiência de folato por degeneração medular",
       "Em ambas as deficiências com igual frequência e gravidade",
       "Apenas quando a hemoglobina estiver abaixo de 7 g/dL",
       "Apenas em pacientes com doença celíaca coexistente"
@@ -174,7 +174,7 @@ const rawQuestions = [
   {
     question: "A anemia perniciosa é causada por:",
     options: [
-      "Anticorpos anti-fator intrínseco → gastrite atrófica → déficit de absorção de B12 no íleo terminal",
+      "Anticorpos anti-fator intrínseco (FI) → déficit de absorção de B12",
       "Anticorpos anti-eritrócitos → hemólise autoimune crônica",
       "Déficit nutricional de vitamina B12 por dieta vegana estrita",
       "Má absorção ileal por comprometimento da Doença de Crohn",
@@ -188,7 +188,7 @@ const rawQuestions = [
     options: [
       "Anticorpo anti-célula parietal (positivo em ~90% dos casos)",
       "Anticorpo anti-fator intrínseco (positivo em ~70% dos casos)",
-      "Anticorpo anti-transglutaminase tecidual (diagnóstico de doença celíaca)",
+      "Anticorpo anti-transglutaminase (diagnóstico de doença celíaca)",
       "Anticorpo anti-DNA de dupla-fita (diagnóstico de LES)",
       "Anticorpo anti-músculo liso (diagnóstico de hepatite autoimune)"
     ],
@@ -198,11 +198,11 @@ const rawQuestions = [
   {
     question: "Quanto tempo os estoques hepáticos de vitamina B12 duram na ausência de reposição?",
     options: [
-      "2 a 5 anos (média 3 anos) — por isso a anemia demora a aparecer em veganos",
-      "3 a 6 meses apenas",
-      "10 a 15 anos em adultos saudáveis",
-      "6 a 12 meses — equivalente ao estoque de folato",
-      "Menos de 3 meses em qualquer condição de má absorção"
+      "2 a 5 anos (estoque hepático grande)",
+      "3 a 6 meses (estoque hepático curto)",
+      "10 a 15 anos (em adultos muito saudáveis)",
+      "6 a 12 meses (igual ao estoque de folato)",
+      "Menos de 3 meses (em má absorção intestinal)"
     ],
     correctIndex: 0,
     explanation: "O estoque hepático de B12 é de 2.000–4.000 mcg, com necessidade diária de apenas 2,5 mcg → reserva para 2 a 5 anos. Por isso veganismo causa anemia megaloblástica apenas após vários anos sem suplementação. Em contraste, o estoque de folato dura apenas 3–4 meses — por isso a deficiência de folato manifesta-se muito mais rapidamente."
@@ -210,11 +210,11 @@ const rawQuestions = [
   {
     question: "Em quanto tempo a deficiência de folato leva ao desenvolvimento de anemia megaloblástica?",
     options: [
-      "3 a 4 meses (estoque hepático de folato é de apenas alguns meses)",
-      "2 a 5 anos (igual ao estoque de vitamina B12)",
-      "6 a 12 meses",
-      "Mais de 10 anos em adultos com dieta variada",
-      "Imediatamente após interrupção completa da ingestão"
+      "3 a 4 meses (estoque hepático limitado)",
+      "2 a 5 anos (igual ao estoque de B12)",
+      "6 a 12 meses (estoque intermediário)",
+      "Mais de 10 anos (em adultos bem nutridos)",
+      "Imediatamente após cessar a ingestão"
     ],
     correctIndex: 0,
     explanation: "O estoque hepático de folato é de apenas 5–10 mg, com necessidade diária de 50–200 mcg → esgota em 3–4 meses de déficit. Situações de maior risco: gestação (demanda aumentada), alcoolismo (má absorção + dieta inadequada + maior excreção), hemólise crônica (eritropoiese acelerada consome mais folato), uso de metotrexato."
@@ -222,9 +222,9 @@ const rawQuestions = [
   {
     question: "Qual é o risco de repor APENAS folato em paciente com déficit concomitante de vitamina B12?",
     options: [
-      "A anemia melhora (corrige a eritropoiese) mas a neuropatia continua progredindo — pode tornar-se irreversível",
+      "A anemia melhora, mas a neuropatia por B12 progride",
       "Hipervitaminose com toxicidade hepática grave e icterícia",
-      "Piora aguda da anemia por supressão competitiva da eritropoiese",
+      "Piora aguda da anemia por supressão da eritropoiese",
       "Anafilaxia à reposição parenteral de folato",
       "Nenhum — o folato pode ser reposto sem preocupação com B12"
     ],
@@ -234,9 +234,9 @@ const rawQuestions = [
   {
     question: "Qual é a via preferencial de reposição de vitamina B12 na maioria das anemias megaloblásticas?",
     options: [
-      "Parenteral (intramuscular) — a maioria dos pacientes tem má absorção intestinal como causa",
-      "Oral — biodisponibilidade equivalente à parenteral em qualquer dose",
-      "Sublingual — absorção direta pela mucosa oral sem necessidade de FI",
+      "Parenteral IM — causa mais comum é má absorção intestinal",
+      "Oral — biodisponibilidade equivalente à via IM",
+      "Sublingual — absorção pela mucosa sem necessidade de FI",
       "Intranasal — gel de cianocobalamina com absorção superior à IM",
       "Intravenosa — mais rápida que a intramuscular"
     ],
@@ -246,11 +246,11 @@ const rawQuestions = [
   {
     question: "Em qual prazo ocorre o pico de reticulócitos após início do tratamento correto de anemia megaloblástica?",
     options: [
-      "5 a 8 dias após o início da reposição",
-      "2 a 3 dias apenas",
-      "10 a 14 dias (igual à normalização da hipersegmentação)",
-      "1 a 2 meses (igual à resolução completa da anemia)",
-      "3 a 6 meses (igual à melhora neurológica)"
+      "5 a 8 dias (pico de reticulócitos)",
+      "2 a 3 dias (resposta imediata da medula)",
+      "10 a 14 dias (hipersegmentação normaliza)",
+      "1 a 2 meses (resolução da anemia)",
+      "3 a 6 meses (melhora neurológica)"
     ],
     correctIndex: 0,
     explanation: "Cronologia da resposta ao tratamento: DHL e bilirrubina normalizam em 2 dias → pico reticulocitário em 5–8 dias → homocisteína normaliza em 5–10 dias → hipersegmentação desaparece em 10–14 dias → anemia regride em 1–2 meses → melhora neurológica em 3–6 meses (pode levar até 12 meses e ser parcial se tratada tardiamente)."
@@ -258,9 +258,9 @@ const rawQuestions = [
   {
     question: "Qual característica diferencia a macrocitose por alcoolismo da macrocitose megaloblástica?",
     options: [
-      "Eritrócitos arredondados (não ovalados) + ausência de hipersegmentação de neutrófilos",
+      "Macrocitose arredondada sem hipersegmentação neutrofílica",
       "VCM muito elevado (>120 fL) com pancitopenia intensa",
-      "Hipersegmentação neutrofílica proeminente + macroovalócitos típicos",
+      "Hipersegmentação neutrofílica + macroovalócitos típicos",
       "DHL extremamente elevado + bilirrubina indireta muito elevada",
       "Ácido metilmalônico elevado com homocisteína normal"
     ],
@@ -270,8 +270,8 @@ const rawQuestions = [
   {
     question: "Qual mecanismo explica o DHL extremamente elevado na anemia megaloblástica?",
     options: [
-      "Eritropoiese ineficaz — destruição intramedular maciça de megaloblastos antes de atingir o sangue periférico",
-      "Hemólise extravascular intensa pelo baço (sequestro esplênico maciço)",
+      "Eritropoiese ineficaz — destruição intramedular de megaloblastos",
+      "Hemólise extravascular intensa pelo baço (sequestro esplênico)",
       "Lesão hepatocelular grave por hepatite viral ou alcoólica concomitante",
       "Liberação de DHL pelos neutrófilos hipersegmentados apoptóticos",
       "Necrose tubular renal aguda por hemoglobinúria intensa"
@@ -282,11 +282,11 @@ const rawQuestions = [
   {
     question: "Quais drogas causam anemia megaloblástica por inibição direta do metabolismo do folato?",
     options: [
-      "Metotrexato (inibe di-hidrofolato redutase) e hidroxiureia (inibe ribonucleotídeo redutase)",
+      "Metotrexato e hidroxiureia (inibem metabolismo do folato)",
       "Penicilina V e amoxicilina (antibióticos beta-lactâmicos)",
       "Omeprazol e pantoprazol (inibem produção ácida gástrica)",
       "Metformina e glibenclamida (antidiabéticos orais)",
-      "Varfarina e heparina (anticoagulantes)"
+      "Varfarina e heparina (anticoagulantes oral e parenteral)"
     ],
     correctIndex: 0,
     explanation: "Metotrexato inibe a di-hidrofolato redutase (DHFR) → impede a regeneração de THF ativo → megaloblastose. Reverter com ácido folínico (leucovorina). Hidroxiureia inibe a ribonucleotídeo redutase → bloqueia síntese de dNTPs → megaloblastose. Zidovudina (AZT) também causa macrocitose. Metformina pode causar déficit de B12 por inibição da absorção ileal, não de folato."
@@ -294,7 +294,7 @@ const rawQuestions = [
   {
     question: "Uma gestante vegana sem suplementação de B12 tem maior risco de quais complicações?",
     options: [
-      "Defeitos do tubo neural no feto + anemia megaloblástica na gestante (B12 e folato ambos essenciais)",
+      "Defeitos do tubo neural no feto + anemia megaloblástica na gestante",
       "Anemia ferropriva grave com Síndrome de Plummer-Vinson",
       "Trombocitose e risco de trombose venosa profunda no puerpério",
       "Polineuropatia periférica isolada no recém-nascido ao nascimento",
@@ -306,7 +306,7 @@ const rawQuestions = [
   {
     question: "Qual das seguintes situações NÃO causa anemia megaloblástica?",
     options: [
-      "Anemia falciforme (drepanocitose) sem suplementação de ácido fólico",
+      "Drepanocitose sem suplementação de ácido fólico",
       "Gastrectomia total sem reposição de vitamina B12",
       "Doença de Crohn com comprometimento extenso do íleo terminal",
       "Uso prolongado e em altas doses de metotrexato",
@@ -318,8 +318,8 @@ const rawQuestions = [
   {
     question: "Paciente com Hb 8,2 g/dL, VCM 118 fL, hipersegmentação de neutrófilos, DHL 4.800 UI/L, ácido metilmalônico elevado e B12 sérica 98 pg/mL. Qual é o diagnóstico mais provável?",
     options: [
-      "Anemia megaloblástica por deficiência de vitamina B12",
-      "Anemia megaloblástica por deficiência isolada de ácido fólico",
+      "Anemia megaloblástica por déficit de B12",
+      "Anemia megaloblástica por déficit isolado de folato",
       "Síndrome mielodisplásica com macrocitose",
       "Macrocitose alcoólica sem megaloblastose verdadeira",
       "Anemia aplástica com VCM aumentado e pancitopenia"
